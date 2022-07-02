@@ -1,12 +1,16 @@
 {
   "name": "vue3",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "dist/kursor.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
+    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "postinstall": "node postinstall.js",
+    "v": "npm version patch",
+    "p": "npm publish"
   },
   "dependencies": {
     "vue": "^3.2.25"
@@ -26,6 +30,9 @@
     "tailwindcss": "^3.1.4",
     "typescript": "^4.7.4",
     "vite": "^2.9.9",
-    "vue-tsc": "^0.34.7"
+    "vue-tsc": "^0.34.7",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
   }
 }
